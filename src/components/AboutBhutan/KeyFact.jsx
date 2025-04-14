@@ -12,8 +12,8 @@ const KeyFact = () => (
   <>
     <h2 className='section-title'>🏔️ Key Facts</h2>
     <ul className='list'>
-      {facts.map((info) => (
-        <li key={info.label}>
+      {facts.map((info, index) => (
+        <li key={index}>
           <strong>{info.label}:</strong> {info.value}
         </li>
       ))}

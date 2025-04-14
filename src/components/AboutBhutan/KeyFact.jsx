@@ -1,28 +1,24 @@
 import React from 'react'
 
-const KeyFact = () => {
-  return (
-    <>
-      <h2 className='section-title'>🏔️ Key Facts</h2>
-      <ul className='list'>
-        <li>
-          <strong>Capital:</strong> Thimphu
+const facts = [
+  { label: 'Capital', value: 'Thimphu' },
+  { label: 'Official Language', value: 'Dzongkha' },
+  { label: 'Government', value: 'Constitutional monarchy' },
+  { label: 'Currency', value: 'Ngultrum (BTN)' },
+  { label: 'Population', value: 'Under 800,000' },
+]
+
+const KeyFact = () => (
+  <>
+    <h2 className='section-title'>🏔️ Key Facts</h2>
+    <ul className='list'>
+      {facts.map((info) => (
+        <li key={info.label}>
+          <strong>{info.label}:</strong> {info.value}
         </li>
-        <li>
-          <strong>Official Language:</strong> Dzongkha
-        </li>
-        <li>
-          <strong>Government:</strong> Constitutional monarchy
-        </li>
-        <li>
-          <strong>Currency:</strong> Ngultrum (BTN)
-        </li>
-        <li>
-          <strong>Population:</strong> Under 800,000
-        </li>
-      </ul>
-    </>
-  )
-}
+      ))}
+    </ul>
+  </>
+)
 
 export default KeyFact

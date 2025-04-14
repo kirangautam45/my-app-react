@@ -33,4 +33,9 @@
   list-style-type: disc;
   padding-left: 20px;
   margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+li {
+  margin: 12px;
 }
